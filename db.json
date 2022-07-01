@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "name":"jjjj",
+  "email":"ffff",
+  "phone":"ffff",
+  "address":"99999"
+
+      
+    },
+    {
+      "name":"aaa",
+      "email":"ssss",
+      "phone":"3333",
+      "address":"5555"
+    }
+  ]
+}

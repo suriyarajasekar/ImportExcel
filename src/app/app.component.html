@@ -4,6 +4,7 @@
   <hr>
   <div class="tools">
     <button (click)="exportData('contactJs')">
+      <!-- <button (click)="ExportTOExcel()">  -->
       <span class="mdi mdi-file-export"> </span>
       <small>Export</small>
     </button>
@@ -20,6 +21,7 @@
     <tr class="tbody" *ngFor="let contact of exportContacts; let odd = odd" [ngClass]="{'odd': odd}">
       <td>{{contact?.name}}</td>
       <td>{{contact?.email}}</td>
+      <!-- <td>{{team.phone}}</td> -->
       <!-- <td>{{contact?.phone}}</td>
       <td>{{contact?.address}}</td> -->
     </tr>
@@ -49,6 +51,7 @@
       <td>{{contact?.email}}</td>
       <!-- <td>{{contact?.phone}}</td>
       <td>{{contact?.address}}</td> -->
+      <td><button>Edit</button></td>
     </tr>
   </table>
 
