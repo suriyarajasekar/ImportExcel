@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import * as faker from 'faker';
 import { faker } from '@faker-js/faker';
+
 import { Contact } from './contact.model';
 import { ExcelService } from './excel.service';
 
@@ -12,6 +13,7 @@ import { ExcelService } from './excel.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  [x: string]: any;
 
   importContacts: Contact[] = [];
   exportContacts: Contact[] = [];
@@ -19,6 +21,32 @@ export class AppComponent implements OnInit {
   constructor(private excelSrv: ExcelService) { }
 
   ngOnInit(): void {
+    // type Employee = Array<{ id: number; name: string }>;
+    // employees: Employee= [
+    //   { id: 1, name: "Ram" },
+    //   { id: 2, name: "John" },
+    //   { id: 3, name: "Franc" },
+    //   { id: 4, name: "Andrew " }
+    // ];
+    // type Employee = Array<{ id: number; name: string }>;
+    
+    // this.employees.setValue([
+    //   { empId: "111", empName: "Mohan", skill: "Java"},
+    //   { empId: "112", empName: "Krishna", skill: "Angular"}	
+    // ]);
+    ///....................................
+    // class Employee {
+    //   empId = '';
+    //   empName = ''; 
+    //   skill = '';
+    // } 
+    //  const emp1 = new Employee();
+    // this.emp1.setValue([
+    //   { empId: "111", empName: "Mohan", skill: "Java"},
+    //   { empId: "112", empName: "Krishna", skill: "Angular"}	
+    // ]);
+    //.................................
+   
     for (let index = 0; index < 10; index++) {
       const contact = new Contact();
       contact.name = faker.name.findName();
